@@ -104,7 +104,7 @@ Other things to know:
 
 - One machine. No clustering, no multi-region, no autoscaling beyond "asleep or awake".
 - One running copy per app, so an app cannot use more than one process.
-- Memory limits need Linux (`/proc`). On macOS and Windows apps are not memory-limited. Windows is untested.
+- Tested on Linux only (CI runs Linux). Memory limits need Linux (`/proc`); on macOS and Windows apps are not memory-limited, and Windows is untested.
 - Dependencies install on the server at deploy time, so it needs network access then.
 - No built-in database. Use files in `DATA_DIR` (SQLite works well) or connect to your own.
 - Invites sign people in as "someone with the link": no accounts, no per-person logs.

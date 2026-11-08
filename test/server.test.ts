@@ -88,7 +88,7 @@ test("a crashing app gives a readable error with its log", async () => {
   } finally { await s.close(); }
 });
 
-test("an app that grows past its memory limit is stopped", async () => {
+test("an app that grows past its memory limit is stopped", { skip: process.platform === "linux" ? false : "memory limits need Linux" }, async () => {
   const s = await boot();
   try {
     const hog = `import http from "node:http"; const keep = []; for (let i = 0; i < 60; i++) keep.push(Buffer.alloc(5 * 1024 * 1024, 1));
