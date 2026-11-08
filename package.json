@@ -1,0 +1,21 @@
+{
+  "name": "pocketcloud",
+  "version": "0.1.0",
+  "description": "Deploy small software for one person or one team: a private URL, sleeps when idle, wakes on the first request.",
+  "type": "module",
+  "bin": { "pocketcloud": "bin/pocketcloud.js" },
+  "files": ["bin", "dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --test --test-concurrency=1 \"test/**/*.test.ts\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pocketcloud": "node src/cli.ts",
+    "bench": "node bench/run.ts"
+  },
+  "engines": { "node": ">=22.18" },
+  "keywords": ["hosting", "deploy", "self-hosted", "paas", "scale-to-zero", "internal-tools", "cli"],
+  "author": "Jay Maurya",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/jay-m007/pocketcloud.git" },
+  "devDependencies": { "@types/node": "^22.18.0", "typescript": "5.9.3" }
+}

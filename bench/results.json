@@ -1,0 +1,21 @@
+{
+  "apps": 20,
+  "appsAwake": 20,
+  "coldStartMs": {
+    "p50": 141,
+    "p95": 169,
+    "max": 169
+  },
+  "warmRequestMs": {
+    "p50": 1.63,
+    "p95": 3.84
+  },
+  "memoryMb": {
+    "daemonWithNoApps": 92.7,
+    "allAwake": 1237.5,
+    "allAsleep": 96.5,
+    "perAwakeApp": 57.2
+  },
+  "node": "v22.22.0",
+  "cpus": 2
+}
